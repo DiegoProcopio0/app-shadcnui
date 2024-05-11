@@ -41,6 +41,22 @@ export default function Home() {
           />
         </section>
       </main>
+      <footer
+        className={`fixed bottom-0 py-6 md:px-8  z-50 w-full border-t border-border/40 hover:border-green-600
+        `}
+      >
+        <div
+          className={`text-white font-bold text-2xl hover:text-green-600 animation-transition select-none`}
+        >
+          <div
+            className={`
+            text-opacity-50 text-balance text-center text-sm leading-loose text-muted-foreground md:text-left
+          `}
+          >
+            <TypeWriter phrase="Powered by shadcn and Next" />
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
