@@ -1,28 +1,34 @@
-import { TypeWriter } from "@/components/TypeWriter";
+import { ModeToggle } from "@/components/mode-toggle";
+import { TypeWriter } from "@/components/type-writer";
+import { ProfileForm } from "@/components/profile-form";
+import { Card } from "@/components/ui/card";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className={`min-h-screen bg-[#09090b]`}>
+    <div className={`min-h-screen`}>
       <header
         className={`sticky top-0 z-50 w-full border-b border-border/40 hover:border-green-600
             bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60
-            flex items-center justify-center py-2 animation-transition h-12
+            flex items-center justify-around py-2 animation-transition h-12
         `}
       >
         <h3
-          className={`text-white font-bold text-2xl hover:text-green-600 animation-transition select-none`}
+          className={`text-card-foreground font-bold text-2xl hover:text-green-600 animation-transition select-none`}
         >
           <TypeWriter phrase="TabaFood" />
         </h3>
+        <ModeToggle />
       </header>
-      <main className={`p-10 flex flex-col justify-center items-center`}>
+      <main
+        className={`p-10 flex flex-col justify-center items-center bg-card`}
+      >
         <section
-          className={`text-white flex flex-col justify-center items-center`}
+          className={`text-card-foreground flex flex-col justify-center items-center`}
         >
           <div className={`mb-4 flex flex-col justify-center items-center`}>
             <h1
-              className={`text-white font-bold text-md hover:text-green-600 animation-transition text-center`}
+              className={`text-card-foreground font-bold text-md hover:text-green-600 animation-transition text-center`}
             >
               <strong>TabaFood</strong>a melhor solução para quem vende e
               consome itens de tabacaria!
@@ -40,9 +46,10 @@ export default function Home() {
             height={300}
           />
         </section>
+        <ProfileForm />
       </main>
       <footer
-        className={`fixed bottom-0 py-6 md:px-8  z-50 w-full border-t border-border/40 hover:border-green-600
+        className={`py-6 md:px-8 z-50 w-full border-t border-border/40 hover:border-green-600
         `}
       >
         <div

@@ -1,7 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.animation-transition {
-  @apply transition-all delay-75 ease-in-out;
-}
