@@ -23,6 +23,8 @@ import { createAccountSchema } from "@/schemas/login";
 import { useToast } from "./ui/use-toast";
 
 export function CreateAccount() {
+  const nada: string = "";
+
   const { toast } = useToast();
   const router = useRouter();
 
