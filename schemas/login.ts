@@ -9,4 +9,11 @@ export const loginSchema = z.object({
   }),
 });
 
+export const createAccountSchema = loginSchema.extend({
+  name: z.string().min(3, {
+    message: "Nome deve conter no mínimo 3 caracteres.",
+  }),
+});
+
 export type User = z.infer<typeof loginSchema>;
+export type CreateUser = z.infer<typeof createAccountSchema>;

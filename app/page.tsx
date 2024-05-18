@@ -1,12 +1,11 @@
 import { ModeToggle } from "@/components/mode-toggle";
 import { TypeWriter } from "@/components/type-writer";
 import { ProfileForm } from "@/components/profile-form";
-import { Card } from "@/components/ui/card";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className={`min-h-screen`}>
+    <div className={`min-h-screen bg-card flex flex-col relative`}>
       <header
         className={`sticky top-0 z-50 w-full border-b border-border/40 hover:border-green-600
             bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60
@@ -21,14 +20,14 @@ export default function Home() {
         <ModeToggle />
       </header>
       <main
-        className={`p-10 flex flex-col justify-center items-center bg-card`}
+        className={`h-full w-full p-10 items-center flex justify-around flex-wrap bg-card gap-8 flex-1`}
       >
         <section
-          className={`text-card-foreground flex flex-col justify-center items-center`}
+          className={`text-card-foreground flex flex-col justify-center items-center max-w-96`}
         >
           <div className={`mb-4 flex flex-col justify-center items-center`}>
             <h1
-              className={`text-card-foreground font-bold text-md hover:text-green-600 animation-transition text-center`}
+              className={`text-card-foreground font-bold text-md hover:text-green-600 animation-transition text-center `}
             >
               <strong>TabaFood</strong>a melhor solução para quem vende e
               consome itens de tabacaria!
@@ -46,10 +45,12 @@ export default function Home() {
             height={300}
           />
         </section>
-        <ProfileForm />
+        <section className="mb-8">
+          <ProfileForm />
+        </section>
       </main>
       <footer
-        className={`py-6 md:px-8 z-50 w-full border-t border-border/40 hover:border-green-600
+        className={`static bottom-0 max-h-28 py-6 md:px-8 z-50 w-full border-t border-border/40 hover:border-green-600
         `}
       >
         <div
