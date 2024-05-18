@@ -44,8 +44,6 @@ export function CreateAccount() {
       title: "Conta criada com sucesso!",
     });
 
-    console.log(values);
-
     router.push("/dashboard");
   }
 
