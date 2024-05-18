@@ -42,8 +42,6 @@ export function Login() {
     toast({
       title: "Logado com sucesso!",
     });
-
-    console.log(values);
     router.push("/dashboard");
   }
 
